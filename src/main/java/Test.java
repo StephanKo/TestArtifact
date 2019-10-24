@@ -1,13 +1,19 @@
-public class Test {
-    @Test
-    public void user_can_search_everything_in_google() {
-        open("http://google.com/ncr");
-        $(By.name("q")).val("selenide").pressEnter();
+import static com.codeborne.selenide.Selenide.*;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.By;
+import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.WebDriverRunner;
 
-        $$("#ires .g").shouldHave(size(10));
+public class Test {
+   public static void main(String[]arg) {
+        open("http://google.com/ncr");
+        // $(By.name("q")).val("5").pressEnter();
+
+      /*  $$("#ires .g").shouldHave(size(10));
 
         $("#ires .g").shouldBe(visible).shouldHave(
-                text("Selenide: concise UI tests in Java"),
-                text("selenide.org"));
+                text("5: concise UI tests in Java"),
+                text("5.org"));
+                */
     }
 }
